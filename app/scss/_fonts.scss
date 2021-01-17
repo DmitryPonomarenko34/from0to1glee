@@ -1,0 +1,49 @@
+@font-face {
+  font-family: "Rubick";
+  font-weight: 400;
+  font-style: normal;
+  src: local("Rubick-Regular"),
+    url("../fonts/Rubick-Regular.woff2") format("woff2"),
+    url("../fonts/Rubick-Regular.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Rubick";
+  font-weight: 500;
+  font-style: normal;
+  src: local("Rubick-Medium"),
+    url("../fonts/Rubick-Medium.woff2") format("woff2"),
+    url("../fonts/Rubick-Medium.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DMsans";
+  font-weight: 400;
+  font-style: normal;
+  src: local("DMsans-Regular"),
+    url("../fonts/DMsans-Regular.woff2") format("woff2"),
+    url("../fonts/DMsans-Regular.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DMsans";
+  font-weight: 500;
+  font-style: normal;
+  src: local("DMsans-Medium"),
+    url("../fonts/DMsans-Medium.woff2") format("woff2"),
+    url("../fonts/DMsans-Medium.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DMsans";
+  font-weight: 700;
+  font-style: normal;
+  src: local("DMsans-Bold"),
+    url("../fonts/DMsans-Bold.woff2") format("woff2"),
+    url("../fonts/DMsans-Bold.woff") format("woff");
+  font-display: swap;
+}
