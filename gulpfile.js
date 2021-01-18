@@ -57,7 +57,7 @@ function images(){
   .pipe(webp({
     quality: 70
   }))
-  .pipe(dest('app/images'))
+  .pipe(dest('dist/images'))
   .pipe(src('app/images/**/*.*'))
   .pipe(imagemin([
     imagemin.gifsicle({interlaced: true}),

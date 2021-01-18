@@ -1,6 +1,124 @@
-@import 'vars';
-@import 'fonts';
-@import 'reset';
-@import 'global';
+@import "vars";
+@import "fonts";
+@import "reset";
+@import "global";
 
-@import 'media';
+.header {
+  padding: 44px 0;
+  background-color: $white-color;
+
+  // .header__inner
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__menu {
+    margin-left: 9%;
+  }
+}
+
+.menu {
+  // .menu__list
+  &__list {
+    display: flex;
+  }
+
+  &__list-item {
+    flex-shrink: 0;
+  }
+
+  // .menu__list-item
+  &__list-item + .menu__list-item {
+    margin-left: 40px;
+  }
+
+  // .menu__list-link
+  &__list-link {
+    font-size: 15px;
+    line-height: 12px;
+    color: $default-color;
+  }
+}
+
+.user-nav {
+  display: flex;
+  align-items: flex-end;
+
+  // .user-nav__item
+  &__item + .user-nav__item {
+    margin-left: 19px;
+  }
+
+  // .user-nav__search
+  &__search {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: #edf1f4;
+  }
+
+  // .user-nav__actions
+  &__actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 25px;
+    height: 50px;
+    min-width: 180px;
+    background-color: $accent-bg;
+  }
+
+  &__actions-link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    transition: ease background-color 0.3s;
+
+    @media (min-width: 992px) {
+      &:hover {
+        background-color: #fde7d3;
+        transition: ease background-color 0.3s;
+      }
+    }
+  }
+
+  &__actions-link:not(:first-child) {
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 1px;
+      height: 70%;
+      background-color: #fde7d3;
+    }
+  }
+
+  &__catalog-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: $second-bg;
+  }
+
+  // .user-nav__item-img
+  &__item-img {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+  }
+}
+
+@import "media";
