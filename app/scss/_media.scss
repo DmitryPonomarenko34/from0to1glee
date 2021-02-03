@@ -1,0 +1,9 @@
+@media (max-width: 1200px) {
+  .header__menu {
+    margin-left: 0;
+  }
+
+  .menu__list-item + .menu__list-item {
+    margin-left: 25px;
+  }
+}

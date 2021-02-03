@@ -1,4 +1,11 @@
+html,
 body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
   font-family: $font-family;
   font-weight: $fw;
   font-size: 18px;
@@ -6,10 +13,20 @@ body {
   color: $default-color;
 }
 
+.main {
+  flex-grow: 1;
+}
+
 .container {
   margin: 0 auto;
   padding: 0 15px;
   max-width: $maxw;
+}
+
+.container-add {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1800px;
 }
 
 .container-narrow {
