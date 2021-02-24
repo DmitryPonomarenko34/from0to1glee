@@ -37,6 +37,7 @@ body {
 
 .title {
   font-size: 36px;
+  text-align: center;
   color: $title-color;
 
   @extend %dmsans-bold;

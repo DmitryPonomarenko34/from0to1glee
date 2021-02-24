@@ -7,7 +7,6 @@ const imagemin      = require('gulp-imagemin');
 const del           = require('del');
 const webp          = require('gulp-webp');
 const webphtml      = require('gulp-webp-html');
-const webpcss       = require('gulp-webp-css');
 const browserSync   = require('browser-sync').create();
 
 
@@ -30,7 +29,6 @@ function styles() {
       overrideBrowserslist: ['last 10 version'],
       grid: true
     }))
-    .pipe(webpcss())
     .pipe(dest('app/css'))
     .pipe(browserSync.stream())
 }
@@ -38,7 +36,8 @@ function styles() {
 function scripts() {
   return src([
       'node_modules/jquery/dist/jquery.js',
-      'node_modules/slick-carousel/slick/slick.js',                                                                                                                                                                                                                                                                                               
+      'node_modules/slick-carousel/slick/slick.js',
+      'node_modules/mixitup/dist/mixitup.js',                                                                                                                                                                                                                                                                                              
       'app/js/main.js'
     ])
     .pipe(concat('main.min.js'))
@@ -101,5 +100,6 @@ exports.watching = watching;
 exports.images = images;
 exports.html = html;
 exports.cleanDist = cleanDist;
+exports.build = series(cleanDist, images, html, build);
 
-exports.default = series(cleanDist, images, build, parallel(styles, scripts, html, browsersync, watching));
+exports.default = parallel(styles, scripts, html, browsersync, watching);
