@@ -21,6 +21,7 @@
 }
 
 .menu {
+  position: relative;
 
   // .menu__list
   &__list {
@@ -44,7 +45,56 @@
     line-height: 12px;
     color: $default-color;
     transition: ease color 0.3s;
-    cursor: default;
+
+    @media (min-width: 992px) {
+      &:hover {
+        color: $accent-color;
+        transition: ease color 0.3s;
+      }
+    }
+  }
+
+  &__list-link.parent {
+    padding-right: 15px;
+  }
+}
+
+body.mouse .menu__list-item:hover .submenu {
+  opacity: 1;
+  visibility: visible;
+  transition: ease opacity 0.3s, ease visibility 0.3s;
+}
+
+body.mouse .menu__list-item:hover .dropdown-icon::after {
+  transform: rotate(-90deg);
+  transition: ease transform 0.3s;
+}
+
+body.touch .submenu.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.submenu {
+  position: absolute;
+  left: 0;
+  top: 20px;
+  z-index: 11;
+  padding-top: 20px;
+  min-width: 140px;
+  opacity: 0;
+  visibility: hidden;
+  transition: ease opacity 0.3s, ease visibility 0.3s;
+
+  &__item {
+    background-color: $second-bg;
+  }
+
+  &__link {
+    display: block;
+    padding: 5px 10px 10px;
+    font-size: 15px;
+    color: $default-color;
 
     @media (min-width: 992px) {
       &:hover {
@@ -55,41 +105,36 @@
   }
 }
 
-.sub-menu {
+.dropdown-icon {
+  position: absolute;
+  right: 0;
+  top: 12px;
+  width: 9px;
+  height: 8px;
 
-  // .sub-menu__list
-  ul &__list {
+  &::before,
+  &::after {
+    content: "";
     position: absolute;
-    left: -50%;
-    top: 20px;
-    padding-top: 20px;
-    width: 90px;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(5px);
-    transition: ease opacity 0.3s, ease visibility 0.3s, ease transform 0.3s;
+    background-color: #506d7b;
   }
 
-  &__submit:hover.sub-menu__list {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-    transition: ease opacity 0.3s, ease visibility 0.3s, ease transform 0.3s;
+  &::before {
+    top: 3px;
+    width: 100%;
+    height: 2px;
   }
 
-  // .sub-menu__link
-
-  &__link {
-    display: block;
-    padding: 7px 2px;
-    cursor: pointer;
-    @extend.menu__list-link;
+  &::after {
+    right: 4px;
+    width: 2px;
+    height: 100%;
+    transition: ease transform 0.3s;
   }
 
-  // .sub-menu__item
-
-  &__item {
-    background-color: $second-bg;
+  &.active::after {
+    transform: rotate(-90deg);
+    transition: ease transform 0.3s;
   }
 }
 
@@ -936,7 +981,7 @@ ul.partners {
   background-color: #fcf5ee;
 }
 
-.partners__item + .partners__item {
+.partners__item+.partners__item {
   margin-left: 100px;
 }
 
