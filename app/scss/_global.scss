@@ -6,8 +6,8 @@ body {
 body {
   display: flex;
   flex-direction: column;
-  font-family: $font-family;
-  font-weight: $fw;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
   font-size: 18px;
   line-height: 30px;
   color: $default-color;
@@ -20,7 +20,7 @@ body {
 .container {
   margin: 0 auto;
   padding: 0 15px;
-  max-width: $maxw;
+  max-width: 1200px;
 }
 
 .container-add {
@@ -29,16 +29,37 @@ body {
   max-width: 1800px;
 }
 
-.container-narrow {
-  margin: 0 auto;
-  padding: 0 15px;
-  max-width: $narrow;
-}
-
 .title {
   font-size: 36px;
   text-align: center;
   color: $title-color;
 
   @extend %dmsans-bold;
+}
+
+.breadcrumbs {
+  display: inline-flex;
+
+  &__item:not(:last-child) {
+    position: relative;
+    padding-right: 20px;
+
+    &::after {
+      content: "/";
+      position: absolute;
+      right: 7px;
+      top: 2px;
+      font-size: 16px;
+      color: $primary-color;
+    }
+  }
+
+  &__link {
+    font-size: 14px;
+    color: $primary-color;
+
+    &--active {
+      color: $second-color;
+    }
+  }
 }
