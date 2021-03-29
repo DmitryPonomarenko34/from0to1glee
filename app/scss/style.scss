@@ -1041,8 +1041,7 @@ ul.partners {
     border-bottom: 2px solid #f6f6f6;
   }
 
-  &__error {
-  }
+  &__error {}
 
   &__text {
     display: block;
@@ -1058,6 +1057,144 @@ ul.partners {
     font-weight: 500;
     font-size: 18px;
     color: $second-color;
+  }
+}
+
+.about {
+  padding: 120px 0;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.about-img {
+  margin-right: 30px;
+  max-width: 570px;
+}
+
+.about-content {
+  max-width: 570px;
+
+  &__descr {
+    position: relative;
+    margin-bottom: 30px;
+    padding-bottom: 60px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 2px;
+      min-width: 500px;
+      background-color: $second-bg;
+    }
+  }
+
+  &__caption {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 35px;
+  }
+
+  &__num {
+    margin-right: 30px;
+    font-weight: 500;
+    font-size: 140px;
+    line-height: 0.8;
+    color: $second-bg;
+  }
+
+  &__word {
+    max-width: 55px;
+    font-size: 16px;
+    color: $second-color;
+  }
+
+  &__title {
+    margin-bottom: 45px;
+  }
+
+  &__title,
+  &__numbers {
+    font-size: 36px;
+    color: $second-color;
+
+    @extend %dmsans-bold;
+  }
+
+  &__text {
+    font-size: 16px;
+    color: $second-color;
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    padding: 13px 0 10px 90px;
+    background-position: 28px 19px;
+    background-size: 42px 40px;
+    background-repeat: no-repeat;
+
+    &+.about-content__item {
+      margin-left: 35px;
+      border-left: 1px solid #e6eaf0;
+    }
+  }
+
+  &__numbers {
+    margin-bottom: 7px;
+  }
+
+  &__subtext {
+    margin-left: 3px;
+    font-size: 16px;
+    color: #4c4c4c;
+    @extend %dmsans-bold;
+  }
+}
+
+.features {
+  padding: 95px 0 75px;
+  background-color: #fcd7b6;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    min-width: 135px;
+    text-align: center;
+    color: $second-color;
+  }
+
+  &__item-box {
+    display: flex;
+    flex: 1 1 auto;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+
+  &__item-img {
+    display: inline-block;
+  }
+
+  &__item-num {
+    color: $second-color;
+  }
+
+  &__item-text {
+    font-size: 18px;
+    @extend %dmsans-bold;
   }
 }
 
