@@ -63,3 +63,23 @@ body {
     }
   }
 }
+
+.social {
+  display: flex;
+
+  &__item+.social__item {
+    margin-left: 8px;
+  }
+
+  &__link {
+    display: flex;
+    flex-shrink: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: #f6f6f6;
+  }
+
+}

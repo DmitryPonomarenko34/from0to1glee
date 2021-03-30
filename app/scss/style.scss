@@ -868,6 +868,7 @@ body.touch .submenu.open {
   width: 100%;
   max-width: 370px;
   background-color: #fff;
+  box-shadow: 6px 6px 23px -3px rgba(34, 60, 80, 0.14);
 
   &__imgbox {
     position: relative;
@@ -963,11 +964,6 @@ body.touch .submenu.open {
   }
 }
 
-.articles .partners {
-  margin-top: -201px;
-  padding: 275px 15px 80px;
-}
-
 ul.partners {
   display: flex;
   flex-wrap: wrap;
@@ -975,6 +971,11 @@ ul.partners {
   justify-content: center;
   padding: 40px 15px;
   background-color: #fcf5ee;
+
+  &--long {
+    margin-top: -201px;
+    padding: 275px 15px 80px;
+  }
 }
 
 .partners__item+.partners__item {
@@ -1185,10 +1186,12 @@ ul.partners {
   }
 
   &__item-img {
+    margin-bottom: 5px;
     display: inline-block;
   }
 
   &__item-num {
+    margin-bottom: 25px;
     color: $second-color;
   }
 
@@ -1197,6 +1200,102 @@ ul.partners {
     @extend %dmsans-bold;
   }
 }
+
+.team {
+  padding: 115px 0 100px;
+
+  &__inner {
+    display: flex;
+  }
+
+  &__info {
+    margin-right: 7%;
+    max-width: 300px;
+  }
+
+  &__info-title {
+    text-align: start;
+    margin-bottom: 30px;
+    color: $second-color;
+  }
+
+  &__info-text {
+    margin-bottom: 40px;
+    font-size: 16px;
+    color: $second-color;
+  }
+
+  &__info-link {
+    display: inline-block;
+    border-radius: 9px;
+    position: relative;
+    padding: 18px 60px 18px 15px;
+    font-size: 15px;
+    color: #fff;
+    background-color: $second-bg;
+    @extend %dmsans-bold;
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 26px;
+      top: 50%;
+      width: 15px;
+      height: 12px;
+      transform: translateY(-50%);
+      background-image: url('../images/icons/angle-right.svg');
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__item {
+    margin-bottom: 20px;
+    margin-right: 20px;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+}
+
+.item-team {
+  max-width: 47%;
+
+  &__box {}
+
+  &__img {}
+
+  &__info {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-top: -60px;
+    box-shadow: 0 6px 57px 0 rgba(37, 37, 37, 0.05);
+    padding: 28px 25px;
+    max-width: 85%;
+    background-color: #fff;
+  }
+
+  &__descr {}
+
+  &__title {
+    margin-bottom: 10px;
+    font-size: 22px;
+    @extend %dmsans-bold;
+  }
+
+  &__text {
+    font-size: 16px;
+    color: #565872;
+  }
+}
+
 
 
 @import "media";
