@@ -35,6 +35,14 @@ $accent-bg: #fcd7b6;
   background-repeat: no-repeat;
 }
 
+%checkbox-hidden {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+}
+
 @function max($numbers...) {
   @return m#{a}x(#{$numbers});
 }
