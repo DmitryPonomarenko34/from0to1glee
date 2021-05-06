@@ -19,11 +19,9 @@ $(function () {
   $('.related-slide').slick({
     slidesToShow: 4,
     slidesToScroll: 1,
-    // autoplay: true,
-    // autoplaySpeed: 3500,
   });
 
-  $('.products-tabs__control-link').on('click', function(e){
+  $('.products-tabs__control-link').on('click', function (e) {
     e.preventDefault();
 
     $('.products-tabs__control-link').removeClass('products-tabs__control-link--active');
@@ -74,7 +72,7 @@ $(function () {
   });
 
   $('.filters__title').on('click', function () {
-    $(this).closest('.filters__item').toggleClass('filters__item--hidden');
+    $(this).closest('.filters-category, .filters-price, .filters-brand, .filters-recent,.recent-posts').toggleClass('filters__item--hidden');
   });
 
   $('.filters-price__input').ionRangeSlider({

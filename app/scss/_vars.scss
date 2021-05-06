@@ -21,12 +21,18 @@ $accent-bg: #fcd7b6;
   font-weight: 700;
 }
 
-%btn {
+%link {
   display: inline-block;
-  padding: 13px;
-  font-size: 14px;
-  color: #fff;
-  background-color: $second-bg;
+  border: 1px solid #b3b7b5;
+  border-radius: 4px;
+  padding: 15px 90px 15px 18px;
+  font-weight: 500;
+  font-size: 15px;
+  color: $default-color;
+  background-image: url("../images/sale/icon.svg");
+  background-position: 95% center;
+  background-size: 22px 9px;
+  background-repeat: no-repeat;
 }
 
 %bg {
