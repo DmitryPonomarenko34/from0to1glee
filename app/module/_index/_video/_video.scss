@@ -1,0 +1,13 @@
+.video {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 500px;
+
+  @extend %bg;
+
+  &__btn {
+    width: 98px;
+    height: 98px;
+  }
+}

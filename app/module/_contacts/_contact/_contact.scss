@@ -1,0 +1,17 @@
+.contact {
+  padding: 70px 0;
+
+  &__inner {
+    display: flex;
+  }
+
+  .form {
+    margin-right: 50px;
+    max-width: 620px;
+  }
+
+  &__form-btn {
+    border-radius: 10px;
+    text-transform: uppercase;
+  }
+}

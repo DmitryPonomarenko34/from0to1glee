@@ -1,0 +1,236 @@
+.header {
+  padding: 44px 0;
+  background-color: #fff;
+
+  // .header__inner
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__menu {
+    margin-left: 9%;
+  }
+}
+
+.menu {
+  position: relative;
+
+  // .menu__list
+  &__list {
+    display: flex;
+  }
+
+  &__list-item {
+    position: relative;
+    flex-shrink: 0;
+  }
+
+  // .menu__list-item
+  &__list-item+.menu__list-item {
+    margin-left: 40px;
+  }
+
+  // .menu__list-link
+  &__list-link {
+    position: relative;
+    font-size: 15px;
+    line-height: 12px;
+    color: $default-color;
+    transition: ease color 0.3s;
+
+    @media (min-width: 992px) {
+      &:hover {
+        color: $accent-color;
+        transition: ease color 0.3s;
+      }
+    }
+  }
+
+  &__list-link.parent {
+    padding-right: 15px;
+  }
+}
+
+body.mouse .menu__list-item:hover .submenu {
+  opacity: 1;
+  visibility: visible;
+  transition: ease opacity 0.3s, ease visibility 0.3s;
+}
+
+body.mouse .menu__list-item:hover .dropdown-icon::after {
+  transform: rotate(-90deg);
+  transition: ease transform 0.3s;
+}
+
+body.touch .submenu.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.submenu {
+  position: absolute;
+  left: 0;
+  top: 20px;
+  z-index: 11;
+  padding-top: 20px;
+  min-width: 140px;
+  opacity: 0;
+  visibility: hidden;
+  transition: ease opacity 0.3s, ease visibility 0.3s;
+
+  &__item {
+    background-color: $second-bg;
+  }
+
+  &__link {
+    display: block;
+    padding: 5px 10px 10px;
+    font-size: 15px;
+    color: $default-color;
+
+    @media (min-width: 992px) {
+      &:hover {
+        color: $accent-color;
+        transition: ease color 0.3s;
+      }
+    }
+  }
+}
+
+.dropdown-icon {
+  position: absolute;
+  right: 0;
+  top: 12px;
+  width: 9px;
+  height: 8px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: #506d7b;
+  }
+
+  &::before {
+    top: 3px;
+    width: 100%;
+    height: 2px;
+  }
+
+  &::after {
+    right: 4px;
+    width: 2px;
+    height: 100%;
+    transition: ease transform 0.3s;
+  }
+
+  &.active::after {
+    transform: rotate(-90deg);
+    transition: ease transform 0.3s;
+  }
+}
+
+.user-nav {
+  display: flex;
+  align-items: flex-end;
+  transform: translateY(5px);
+
+  // .user-nav__item
+  &__item+.user-nav__item {
+    margin-left: 19px;
+  }
+
+  // .user-nav__search
+  &__search {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: #edf1f4;
+  }
+
+  // .user-nav__actions
+  &__actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 25px;
+    height: 50px;
+    min-width: 180px;
+    background-color: $accent-bg;
+  }
+
+  &__actions-link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    transition: ease background-color 0.3s;
+
+    @media (min-width: 992px) {
+      &:hover {
+        background-color: #fde7d3;
+        transition: ease background-color 0.3s;
+      }
+    }
+  }
+
+  &__num {
+    position: absolute;
+    right: -8px;
+    top: -5px;
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 0 2px;
+    height: 16px;
+    min-width: 16px;
+    font-size: 10px;
+    color: $second-color;
+    background-color: #fff;
+    @extend%dmsans-regular;
+  }
+
+  &__actions-link:not(:first-child) {
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 1px;
+      height: 70%;
+      background-color: #fde7d3;
+    }
+  }
+
+  &__catalog-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: $second-bg;
+  }
+
+  &__actions-link__box {
+    position: relative;
+    line-height: 0;
+  }
+
+  // .user-nav__item-img
+  &__item-img {
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+  }
+}

@@ -1,0 +1,17 @@
+ul.partners {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 15px;
+  background-color: #fcf5ee;
+
+  &--long {
+    margin-top: -201px;
+    padding: 275px 15px 80px;
+  }
+}
+
+.partners__item+.partners__item {
+  margin-left: 100px;
+}

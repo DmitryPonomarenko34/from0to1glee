@@ -1,0 +1,31 @@
+.info {
+  padding: 45px 0;
+  background-color: #fef7f0;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    padding-left: 75px;
+    max-width: 280px;
+    background-position: top left;
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+  }
+
+  &__item-title {
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: $accent-color;
+
+    @extend %dmsans-bold;
+  }
+
+  &__item-text {
+    font-size: 16px;
+
+    @extend %dmsans-regular;
+  }
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glee</title>
+  <link rel="stylesheet" href="css/contacts.min.css">
+</head>
+
+<body>
+  {% include 'app/module/_header/_header.html' %}
+  <main class="main">
+    {% include 'app/module/_top/_top.html' %}
+    {% include 'app/module/_contacts/_contact-info/_contact-info.html' %}
+    {% include 'app/module/_contacts/_contact/_contact.html' %}
+    {% include 'app/module/_index/_articles/_articles.html' %}
+  </main>
+    {% include 'app/module/_footer/_footer.html' %}
+  <script async src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap">
+  </script>
+  <script>
+    function initMap() {
+      const center = new google.maps.LatLng(29.86750811019011, -95.36288641403716);
+      const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 9,
+        center: center,
+        styles: [{
+            "featureType": "landscape",
+            "elementType": "all",
+            "stylers": [{
+                "hue": "#6600ff"
+              },
+              {
+                "saturation": -11
+              }
+            ]
+          },
+          {
+            "featureType": "poi",
+            "elementType": "all",
+            "stylers": [{
+                "saturation": -78
+              },
+              {
+                "hue": "#6600ff"
+              },
+              {
+                "lightness": -47
+              },
+              {
+                "visibility": "off"
+              }
+            ]
+          },
+          {
+            "featureType": "road",
+            "elementType": "all",
+            "stylers": [{
+                "hue": "#5e00ff"
+              },
+              {
+                "saturation": -79
+              }
+            ]
+          },
+          {
+            "featureType": "road.local",
+            "elementType": "all",
+            "stylers": [{
+                "lightness": 30
+              },
+              {
+                "weight": 1.3
+              }
+            ]
+          },
+          {
+            "featureType": "transit",
+            "elementType": "all",
+            "stylers": [{
+                "visibility": "simplified"
+              },
+              {
+                "hue": "#5e00ff"
+              },
+              {
+                "saturation": -16
+              }
+            ]
+          },
+          {
+            "featureType": "transit.line",
+            "elementType": "all",
+            "stylers": [{
+              "saturation": -72
+            }]
+          },
+          {
+            "featureType": "water",
+            "elementType": "all",
+            "stylers": [{
+                "saturation": -65
+              },
+              {
+                "hue": "#1900ff"
+              },
+              {
+                "lightness": 8
+              }
+            ]
+          }
+        ],
+      });
+      const svgMarker = {
+        path: "M28.167,4.926 C25.050,1.751 20.907,0.003 16.499,0.003 C12.092,0.003 7.949,1.751 4.832,4.926 C-0.935,10.800 -1.651,21.852 3.280,28.549 L16.499,47.995 L29.699,28.575 C34.651,21.852 33.934,10.800 28.167,4.926 ZM16.652,22.791 C13.331,22.791 10.629,20.038 10.629,16.656 C10.629,13.273 13.331,10.520 16.652,10.520 C19.972,10.520 22.675,13.273 22.675,16.656 C22.675,20.038 19.972,22.791 16.652,22.791 Z",
+        fillColor: "#436372",
+        fillOpacity: 0.9,
+        strokeWeight: 0,
+        rotation: 0,
+        scale: 1,
+        anchor: new google.maps.Point(15, 30),
+      };
+      new google.maps.Marker({
+        position: map.getCenter(),
+        icon: svgMarker,
+        map: map,
+      });
+    }
+  </script>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

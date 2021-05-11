@@ -1,13 +1,15 @@
 const { src, dest, watch, parallel, series } = require('gulp');
-const scss          = require('gulp-sass');
-const concat        = require('gulp-concat');
-const autoprefixer  = require('gulp-autoprefixer');
-const uglify        = require('gulp-uglify');
-const imagemin      = require('gulp-imagemin');
-const del           = require('del');
-const webp          = require('gulp-webp');
-const webphtml      = require('gulp-webp-html');
-const browserSync   = require('browser-sync').create();
+const scss               = require('gulp-sass');
+const nunjuckRender      = require('gulp-nunjucks-render');
+const autoprefixer       = require('gulp-autoprefixer');
+const rename             = require('gulp-rename');
+const concat             = require('gulp-concat');
+const uglify             = require('gulp-uglify');
+const imagemin           = require('gulp-imagemin');
+const del                = require('del');
+const webp               = require('gulp-webp');
+const webphtml           = require('gulp-webp-html');
+const browserSync        = require('browser-sync').create();
 
 
 function browsersync() {
@@ -20,14 +22,16 @@ function browsersync() {
 }
 
 function styles() {
-  return src('app/scss/style.scss')
+  return src('app/scss/*.scss')
     .pipe(scss({
       outputStyle: 'compressed'
     }))
-    .pipe(concat('style.min.css'))
+    .pipe(rename({
+      suffix: ".min"
+    }))
     .pipe(autoprefixer({
       overrideBrowserslist: ['last 10 version'],
-      grid: true
+      grid: false
     }))
     .pipe(dest('app/css'))
     .pipe(browserSync.stream())
@@ -54,6 +58,13 @@ function html() {
   return src('app/**/*.html')
   .pipe(webphtml())
   .pipe(dest('dist'))
+}
+
+function nunjuck() {
+  return src('app/nunjuck/*.njk')
+  .pipe(nunjuckRender())
+  .pipe(dest('app'))
+  .pipe(browserSync.stream())
 }
 
 function images(){
@@ -92,7 +103,8 @@ function cleanDist() {
 }
 
 function watching() {
-  watch(['app/scss/**/*.scss'], styles);
+  watch(['app/**/*.scss'], styles);
+  watch(['app/nunjuck/*.njk'], nunjuck);
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
   watch(['app/**/*.html']).on('change', browserSync.reload);
 }
@@ -102,8 +114,9 @@ exports.scripts = scripts;
 exports.browsersync = browsersync;
 exports.watching = watching;
 exports.images = images;
+exports.nunjuck = nunjuck;
 exports.html = html;
 exports.cleanDist = cleanDist;
 exports.build = series(cleanDist, images, html, build);
 
-exports.default = parallel(styles, scripts, html, browsersync, watching);
+exports.default = parallel(nunjuck, styles, scripts, html, browsersync, watching);

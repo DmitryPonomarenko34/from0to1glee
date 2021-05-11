@@ -1,0 +1,42 @@
+.design {
+  padding: 50px 0 120px;
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__filter {
+    margin-bottom: 75px;
+  }
+
+  &__items {
+    display: grid;
+    grid-gap: 30px 25px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.design-item {
+  padding-top: 25px;
+  padding-left: 35px;
+  min-height: 250px;
+  background-position: 95% center;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-color: #f8f8f8;
+
+  @extend %dmsans-bold;
+
+  &__title {
+    margin-bottom: 5px;
+    width: 100%;
+    max-width: 200px;
+    font-size: 20px;
+    color: $title-color;
+  }
+
+  &__subtitle {
+    font-size: 16px;
+    color: $second-bg;
+  }
+}

@@ -1,0 +1,40 @@
+.features {
+  padding: 95px 0 75px;
+  background-color: #fcd7b6;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    min-width: 135px;
+    text-align: center;
+    color: $second-color;
+  }
+
+  &__item-box {
+    display: flex;
+    flex: 1 1 auto;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+
+  &__item-img {
+    margin-bottom: 5px;
+    display: inline-block;
+  }
+
+  &__item-num {
+    margin-bottom: 25px;
+    color: $second-color;
+  }
+
+  &__item-text {
+    font-size: 18px;
+    @extend %dmsans-bold;
+  }
+}

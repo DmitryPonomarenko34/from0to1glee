@@ -1,0 +1,161 @@
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #dae4e9;
+  padding: 77px 0 40px;
+
+  &__contact {
+    margin-top: -11px;
+    width: 100%;
+    max-width: 200px;
+  }
+
+  // .footer-top__logo
+
+  &__logo {
+    display: inline-block;
+    margin-bottom: 17px;
+  }
+
+  &__item-link+.footer-top__item-link {
+    margin-top: 15px;
+  }
+
+  // .footer-top__item-link
+
+  &__item-link {
+    display: block;
+    font-size: 14px;
+    line-height: 22px;
+    color: $primary-color;
+    transition: ease color 0.3s;
+
+    &:hover {
+      color: $second-color;
+      transition: ease color 0.3s;
+    }
+  }
+
+  &__nav {
+    margin-right: 6.9%;
+    width: 100%;
+    max-width: 120px;
+  }
+
+  // .footer-top__title
+
+  &__title {
+    margin-bottom: 30px;
+    font-size: 16px;
+    line-height: 21px;
+    text-transform: uppercase;
+
+    @extend %dmsans-bold;
+  }
+
+  // .footer-top__list
+
+  &__list {}
+
+  // .footer-top__list-item
+
+  &__list-item+.footer-top__list-item {
+    margin-top: 15px;
+  }
+
+  // .footer-top__list-link
+
+  &__list-link {
+    @extend.footer-top__item-link;
+  }
+
+  // .footer-top__item-text
+
+  &__item-text {
+    margin-bottom: 35px;
+    font-size: 14px;
+    line-height: 22px;
+    color: $primary-color;
+  }
+
+  &__form {
+    width: 100%;
+    max-width: 270px;
+  }
+
+  // .footer-top__item-form
+  &__item-form {
+    font-size: 0;
+  }
+
+  // .footer-top__item-input
+
+  &__item-input {
+    border: none;
+    padding: 12px 16px;
+    width: 100%;
+    max-width: 170px;
+    font-size: 16px;
+    background-color: #fef7f0;
+
+    &::placeholder {
+      font-size: 12px;
+      color: #234969;
+
+      @extend %dmsans-regular;
+    }
+  }
+
+  // .footer-top__item-btn
+
+  &__item-btn {
+    border: none;
+    padding: 12px 0;
+    width: 100%;
+    max-width: 100px;
+    font-size: 14px;
+    color: #fff;
+    background-color: $second-bg;
+    cursor: pointer;
+
+    @extend %dmsans-regular;
+  }
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0;
+  font-size: 14px;
+  color: $primary-color;
+
+  &__breadcrumbs {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__breadcrumbs-item+.footer-bottom__breadcrumbs-item {
+    position: relative;
+    margin-left: 30px;
+
+    &::before {
+      content: "|";
+      position: absolute;
+      left: -15px;
+      top: 0;
+      width: 3px;
+      height: 100%;
+      color: currentColor;
+    }
+  }
+
+  &__breadcrumbs-link {
+    color: $primary-color;
+    cursor: pointer;
+
+    &:hover {
+      color: $second-color;
+      transition: ease color 0.3s;
+    }
+  }
+}

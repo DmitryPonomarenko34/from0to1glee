@@ -1,0 +1,43 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: $second-color;
+
+  .pagination__list {
+    display: flex;
+    padding: 0 15px;
+  }
+
+  &__list-item+.pagination__list-item {
+    margin-left: 15px;
+  }
+
+  &__list-link,
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $second-bg;
+    min-width: 50px;
+    min-height: 50px;
+    color: inherit;
+    transition: ease 0.3s background-color, ease 0.3s color;
+
+    &:hover {
+      color: #fff;
+      background-color: $second-bg;
+      transition: ease 0.3s background-color, ease 0.3s color;
+    }
+  }
+
+  &__link {
+    min-width: 75px;
+  }
+
+  &__link--active {
+    color: #fff;
+    background-color: $second-bg;
+  }
+}

@@ -1,0 +1,50 @@
+.sale {
+  padding: 200px 0 75px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    width: 100%;
+    max-width: 50%;
+    color: $second-color;
+    background-color: $accent-bg;
+  }
+
+  &__item+.sale__item {
+    margin-left: 30px;
+  }
+
+  &__item-img__box {
+    margin-right: 30px;
+    width: 100%;
+    max-width: 320px;
+    transform: translateY(-120px);
+  }
+
+  &__item-info {
+    max-width: 330px;
+  }
+
+  &__item-title {
+    margin-bottom: 20px;
+    font-size: 26px;
+
+    @extend %dmsans-bold;
+  }
+
+  &__item-text {
+    margin-bottom: 35px;
+    font-size: 16px;
+  }
+
+  &__item-link {
+    @extend %link;
+  }
+}

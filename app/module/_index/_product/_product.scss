@@ -1,0 +1,268 @@
+.product {
+  padding: 70px 0 30px;
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__filter {
+    margin-bottom: 75px;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .product-item {
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+  }
+}
+
+
+.filter {
+  display: flex;
+  justify-content: center;
+
+  &__btn {
+    border: none;
+    padding: 0;
+    font-size: 16px;
+    color: $primary-color;
+    background-color: transparent;
+    transition: ease color 0.3s;
+    cursor: pointer;
+
+    @extend %dmsans-bold;
+
+    &:hover {
+      color: $title-color;
+      transition: ease color 0.3s;
+    }
+  }
+
+  &__btn+.filter__btn {
+    margin-left: 30px;
+  }
+
+  .mixitup-control-active {
+    color: $title-color;
+    transition: ease color 0.3s;
+  }
+}
+
+.product-item {
+  margin-right: 30px;
+  margin-bottom: 40px;
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 15px;
+    min-height: 366px;
+    font-size: 18px;
+    max-width: 270px;
+    min-width: 270px;
+    box-shadow: 0 6px 17px 3px rgba(65, 40, 40, 0.05);
+    background-color: #fff;
+    border-radius: 18px;
+
+
+    &:hover {
+      .user-action {
+        opacity: 1;
+        visibility: visible;
+        transition: ease opacity 0.3s, ease visibility 0.3s;
+      }
+    }
+  }
+
+  &__img-box {
+    display: flex;
+    flex: 1 1 auto;
+    align-items: flex-end;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+
+  &__img {
+    flex-shrink: 0;
+    max-height: 205px;
+    object-fit: cover;
+  }
+
+  &__box {
+    text-align: center;
+  }
+
+  &__title {}
+
+  &__price {}
+
+  &__text {
+    display: none;
+  }
+
+  &__rate {
+    display: none;
+  }
+
+  &.product-item--list {
+    margin-right: 0;
+
+    .product-item__wrapper {
+      align-items: center;
+      justify-content: flex-start;
+      flex-direction: row;
+      min-height: auto;
+      padding: 0;
+      width: auto;
+      font-size: 18px;
+      max-width: none;
+      box-shadow: none;
+      background-color: transparent;
+      border-radius: 0;
+    }
+
+    .product-item__img-box {
+      flex: 0 1 auto;
+      align-items: center;
+      margin-right: 60px;
+      border: 1px solid #f2f2f2;
+      min-height: 500px;
+      min-width: 370px;
+      max-width: 370px;
+    }
+
+    .product-item__box {
+      display: flex;
+      flex-direction: column;
+      max-width: 415px;
+      text-align: left;
+    }
+
+    .product-item__img {
+      max-height: 345px;
+    }
+
+    .product-item__title {
+      order: -1;
+      margin-bottom: 20px;
+      font-weight: 400;
+      font-size: 40px;
+      color: #333;
+    }
+
+    .product-item__rate {
+      display: block;
+      order: -1;
+      margin-bottom: 30px;
+    }
+
+    .product-item__price {
+      margin-bottom: 30px;
+      font-size: 30px;
+      color: #333;
+    }
+
+    .product-item__text {
+      display: block;
+      margin-bottom: 40px;
+      font-size: 16px;
+      color: $second-color;
+    }
+
+    .user-action {
+      order: 1;
+      position: relative;
+      opacity: 1;
+      visibility: visible;
+      left: 0;
+      top: 0;
+      transform: translateX(0);
+
+      &__link--search {
+        display: none;
+      }
+
+      &__link {
+        margin-right: 20px;
+        border-radius: 0;
+        box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
+
+        &+.user-action__link {
+          margin-left: 0;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+.user-action {
+  position: absolute;
+  left: 50%;
+  top: 150px;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-50%);
+  transition: ease opacity 0.3s, ease visibility 0.3s;
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
+    background-color: #fff;
+    transition: ease background-color 0.3s;
+
+    @media (min-width: 992px) {
+      &:hover {
+        background-color: $second-bg;
+        transition: ease background-color 0.3s;
+
+        .user-action__icon {
+          path {
+            fill: #fff;
+            transition: ease fill 0.3s;
+          }
+        }
+      }
+    }
+  }
+
+  &__link--active {
+    background-color: $second-bg;
+    transition: ease background-color 0.3s;
+
+    .user-action__icon {
+      path {
+        fill: #fff;
+        transition: ease fill 0.3s;
+      }
+    }
+  }
+
+  &__link+&__link {
+    margin-left: 20px;
+  }
+
+  &__icon {
+    path {
+      transition: ease fill 0.3s;
+    }
+  }
+}
