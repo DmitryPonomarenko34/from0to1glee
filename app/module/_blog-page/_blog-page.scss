@@ -6,9 +6,9 @@
   }
 
   &__content {
+    margin-right: 70px;
     width: 100%;
     max-width: 830px;
-    margin-right: 70px;
   }
 
   &__article {
@@ -21,16 +21,16 @@
   }
 
   &__title {
+    margin-bottom: 20px;
+    font-weight: inherit;
     font-size: 36px;
     color: $title-color;
-    font-weight: inherit;
-    margin-bottom: 20px;
   }
 
   &__text {
-    color: $second-color;
-    font-size: 16px;
     margin-bottom: 30px;
+    font-size: 16px;
+    color: $second-color;
   }
 
   &__link {
@@ -50,105 +50,67 @@
   }
 
   .article-info {
-    display: flex;
-    padding-top: 10px;
-    font-size: 12px;
-    color: #222933;
-
-    &__time {
-      margin-right: 30px;
-    }
-
-    &__time,
-    &__author {
-      position: relative;
-      padding-left: 22px;
-
-      &::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 50%;
-        width: 14px;
-        height: 14px;
-        transform: translateY(-50%);
-
-        @extend %bg;
-      }
-    }
-
-    &__time {
-      &::before {
-        background-image: url("../images/icons/clock.svg");
-      }
-    }
-
-    &__author {
-      color: #222933;
-
-      &::before {
-        background-image: url("../images/icons/user.svg");
-      }
-    }
-  }
-
-  .article-info {
     position: absolute;
     left: 0;
     bottom: 0;
     padding: 20px;
     width: 290px;
-    color: #fff;
     font-size: 13px;
+    color: #fff;
     background-color: $second-bg;
-
-    &__time {
-      margin-right: 25px;
-
+    &__time,
+    &__author {
+      position: relative;
+      padding-left: 22px;
       &::before {
-        background-image: url('../images/icons/calendar.svg');
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 15px;
+        height: 15px;
+        background-repeat: no-repeat;
+        transform: translateY(-50%);
       }
     }
-
+    &__time {
+      margin-right: 22px;
+      &::before {
+        background-image: url("../images/icons/calendar.svg");
+      }
+    }
     &__author {
       color: inherit;
-
       &::before {
-        background-image: url('../images/icons/user-white.svg');
+        background-image: url("../images/icons/user-white.svg");
       }
-    }
-
-    &__time::before,
-    &__author::before {
-      width: 15px;
-      height: 16px;
     }
   }
 }
 
 .search-form {
-  width: 100%;
-  height: 40px;
   display: flex;
   margin-bottom: 60px;
+  width: 100%;
+  height: 40px;
 
   &__input {
-    padding-right: 10px;
+    flex: 0 1 auto;
     border: 2px solid #eef2f5;
     border-right: none;
+    padding-right: 10px;
     height: 100%;
-    flex: 0 1 auto;
   }
 
   &__btn {
-    padding: 0;
-    border: none;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #edf1f4;
-    min-width: 45px;
+    border: none;
+    padding: 0;
     height: 100%;
+    min-width: 45px;
+    background-color: #edf1f4;
     cursor: pointer;
   }
 }
@@ -166,9 +128,9 @@
   }
 
   &__img {
-    min-width: 70px;
-    height: 70px;
     flex: none;
+    height: 70px;
+    min-width: 70px;
     object-fit: cover;
   }
 
@@ -181,26 +143,26 @@
   }
 
   &__title {
+    font-weight: inherit;
     font-size: 14px;
     line-height: 20px;
     color: $title-color;
-    font-weight: inherit;
   }
 
   &__date {
     position: relative;
     padding-left: 22px;
-    color: #9a9a9a;
     font-size: 12px;
+    color: #9a9a9a;
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       left: 0;
       top: 6px;
       width: 15px;
       height: 16px;
-      background-image: url('../images/icons/calendar-grey.svg');
+      background-image: url("../images/icons/calendar-grey.svg");
     }
   }
 }
@@ -208,8 +170,6 @@
 .filters-category {
   overflow-y: hidden;
   margin-bottom: 30px;
-
-  &__form {}
 
   &__label {
     display: block;
@@ -241,7 +201,7 @@
       top: 22px;
       width: 5px;
       height: 10px;
-      background-image: url('../images/icons/icon-right.svg');
+      background-image: url("../images/icons/icon-right.svg");
       background-repeat: no-repeat;
     }
   }
@@ -268,8 +228,6 @@
       transition: transform 0.3s ease, top 0.3s ease;
     }
   }
-
-  &__wrapper {}
 
   &__title {
     position: relative;

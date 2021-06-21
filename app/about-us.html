@@ -1,97 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Glee</title>
-  <link rel="stylesheet" href="css/about-us.min.css">
-</head>
-
-<body>
-  <header class="header">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glee</title>
+    <link rel="stylesheet" href="css/about-us.min.css">
+  </head>
+  <body>
+    <div class="site-container">
+      <header class="header">
   <div class="container-add">
     <div class="header__inner">
       <a class="logo" href="#">
         <img src="images/logo.png" alt="logo">
       </a>
       <nav class="menu header__menu">
-        <ul class="menu__list">
-          <li class="menu__list-item">
-            <a class="menu__list-link" href="#">Home</a>
-            <span class="dropdown-icon"></span>
-            <ul class="submenu">
-              <li class="submenu__item">
-                <a class="submenu__link" href="#">Lorem, ipsum.</a>
-              </li>
-              <li class="submenu__item">
-                <a class="submenu__link" href="#">Lorem, ipsum.</a>
-              </li>
-              <li class="submenu__item">
-                <a class="submenu__link" href="#">Lorem, ipsum.</a>
-              </li>
-            </ul>
-          </li>
-          <li class="menu__list-item">
-            <a class="menu__list-link" href="#">About</a>
-          </li>
-          <li class="menu__list-item">
-            <a class="menu__list-link" href="#">Services</a>
-          </li>
-          <li class="menu__list-item">
-            <a class="menu__list-link" href="#">Pages</a>
-          </li>
-          <li class="menu__list-item">
-            <a class="menu__list-link" href="#">News</a>
-            <span class="dropdown-icon"></span>
-            <ul class="submenu">
-              <li class="submenu__item">
-                <a class="submenu__link" href="#">Lorem, ipsum.</a>
-              </li>
-              <li class="submenu__item">
-                <a class="submenu__link" href="#">Lorem, ipsum.</a>
-              </li>
-              <li class="submenu__item">
-                <a class="submenu__link" href="#">Lorem, ipsum.</a>
-              </li>
-            </ul>
-          </li>
-          <li class="menu__list-item">
-            <a class="menu__list-link" href="#">Contact</a>
-          </li>
-        </ul>
+        <a class="menu__search search" href="#">
+          <img class="user-nav__img" src="images/icons/search.svg" alt="search">
+        </a>
+        <button class="menu__btn">
+          <span class="menu__btn-line"></span>
+        </button>
+        <div class="menu__box">
+          <ul class="menu__list">
+            <li class="menu__list-item submenu-box">
+              <a class="menu__list-link" href="#">Home</a>
+              <span class="dropdown-icon"></span>
+              <ul class="submenu">
+                <li class="submenu__item">
+                  <a class="submenu__link" href="#">Lorem, ipsum.</a>
+                </li>
+                <li class="submenu__item">
+                  <a class="submenu__link" href="#">Lorem, ipsum.</a>
+                </li>
+                <li class="submenu__item">
+                  <a class="submenu__link" href="#">Lorem, ipsum.</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu__list-item">
+              <a class="menu__list-link" href="#">About</a>
+            </li>
+            <li class="menu__list-item">
+              <a class="menu__list-link" href="#">Services</a>
+            </li>
+            <li class="menu__list-item">
+              <a class="menu__list-link" href="#">Pages</a>
+            </li>
+            <li class="menu__list-item submenu-box">
+              <a class="menu__list-link" href="#">News</a>
+              <span class="dropdown-icon"></span>
+              <ul class="submenu">
+                <li class="submenu__item">
+                  <a class="submenu__link" href="#">Lorem, ipsum.</a>
+                </li>
+                <li class="submenu__item">
+                  <a class="submenu__link" href="#">Lorem, ipsum.</a>
+                </li>
+                <li class="submenu__item">
+                  <a class="submenu__link" href="#">Lorem, ipsum.</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu__list-item">
+              <a class="menu__list-link" href="#">Contact</a>
+            </li>
+          </ul>
+          <div class="user-nav">
+            <div class="user-nav__item">
+              <a class="user-nav__search search" href="#">
+                <img class="user-nav__img" src="images/icons/search.svg" alt="search">
+              </a>
+            </div>
+            <div class="user-nav__item user-nav__actions">
+              <a class="user-nav__actions-link" href="#">
+                <div class="user-nav__actions-link__box">
+                  <img class="user-nav__item-img" src="images/icons/heart.svg" alt="liked product">
+                  <span class="user-nav__num">0</span>
+                </div>
+              </a>
+              <a class="user-nav__actions-link" href="#">
+                <div class="user-nav__actions-link__box">
+                  <img src="images/icons/breanch.svg" alt="basket">
+                  <span class="user-nav__num">0</span>
+                </div>
+              </a>
+            </div>
+            <div class="user-nav__item user-nav__catalog">
+              <a class="user-nav__catalog-link" href="#">
+                <img class="user-nav__item-img" src="images/icons/eclipse.svg" alt="product catalog">
+              </a>
+            </div>
+          </div>
+        </div>
       </nav>
-      <div class="user-nav">
-        <div class="user-nav__item">
-          <a class="user-nav__search" href="#">
-            <img class="user-nav__img" src="images/icons/search.svg" alt="search">
-          </a>
-        </div>
-        <div class="user-nav__item user-nav__actions">
-          <a class="user-nav__actions-link" href="#">
-            <div class="user-nav__actions-link__box">
-              <img class="user-nav__item-img" src="images/icons/heart.svg" alt="liked product">
-              <span class="user-nav__num">0</span>
-            </div>
-          </a>
-          <a class="user-nav__actions-link" href="#">
-            <div class="user-nav__actions-link__box">
-              <img src="images/icons/breanch.svg" alt="basket">
-              <span class="user-nav__num">0</span>
-            </div>
-          </a>
-        </div>
-        <div class="user-nav__item user-nav__catalog">
-          <a class="user-nav__catalog-link" href="#">
-            <img class="user-nav__item-img" src="images/icons/eclipse.svg" alt="product catalog">
-          </a>
-        </div>
-      </div>
     </div>
   </div>
 </header>
-  <main class="main">
-  <section class="top">
+      <main class="main">
+        <section class="top">
   <div class="container">
     <h3 class="top__title">Page</h3>
     <ul class="breadcrumbs">
@@ -104,7 +111,7 @@
     </ul>
   </div>
 </section>
-  <section class="about">
+        <section class="about">
   <div class="container">
     <div class="about__inner">
       <div class="about-img">
@@ -147,7 +154,7 @@
     </div>
   </div>
 </section>
-  <div class="features">
+        <div class="features">
   <div class="container">
     <div class="features__inner">
       <div class="features__item">
@@ -197,7 +204,7 @@
     </div>
   </div>
 </div>
-  <section class="team">
+        <section class="team">
   <div class="container">
     <div class="team__inner">
       <div class="team__info">
@@ -395,7 +402,7 @@
     </div>
   </div>
 </section>
-  <section class="articles">
+        <section class="articles">
   <div class="container">
     <div class="articles__box">
       <h3 class="title">
@@ -498,8 +505,8 @@
     </li>
   </ul>
 </section>
-  </main>
-  <footer class="footer">
+      </main>
+      <footer class="footer">
   <div class="container">
     <div class="footer-top">
       <div class="footer-top__item footer-top__contact">
@@ -587,7 +594,7 @@
     </div>
   </div>
 </footer>
-  <script src="js/main.min.js"></script>
-</body>
-
+    </div>
+    <script src="js/main.min.js"></script>
+  </body>
 </html>

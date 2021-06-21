@@ -1,37 +1,31 @@
 .team {
   padding: 115px 0 100px;
-
   &__inner {
     display: flex;
   }
-
   &__info {
     margin-right: 7%;
     max-width: 300px;
   }
-
   &__info-title {
-    text-align: start;
     margin-bottom: 30px;
+    text-align: start;
     color: $second-color;
   }
-
   &__info-text {
     margin-bottom: 40px;
     font-size: 16px;
     color: $second-color;
   }
-
   &__info-link {
+    position: relative;
     display: inline-block;
     border-radius: 9px;
-    position: relative;
     padding: 18px 60px 18px 15px;
     font-size: 15px;
     color: #fff;
     background-color: $second-bg;
     @extend %dmsans-bold;
-
     &::after {
       content: '';
       position: absolute;
@@ -39,9 +33,9 @@
       top: 50%;
       width: 15px;
       height: 12px;
-      transform: translateY(-50%);
       background-image: url('../images/icons/angle-right.svg');
       background-repeat: no-repeat;
+      transform: translateY(-50%);
     }
   }
 
@@ -52,8 +46,8 @@
   }
 
   &__item {
-    margin-bottom: 20px;
     margin-right: 20px;
+    margin-bottom: 20px;
 
     &:nth-child(2n) {
       margin-right: 0;
@@ -73,13 +67,11 @@
     display: flex;
     justify-content: space-between;
     margin-top: -60px;
-    box-shadow: 0 6px 57px 0 rgba(37, 37, 37, 0.05);
     padding: 28px 25px;
     max-width: 85%;
+    box-shadow: 0 6px 57px 0 rgba(37, 37, 37, 0.05);
     background-color: #fff;
   }
-
-  &__descr {}
 
   &__title {
     margin-bottom: 10px;

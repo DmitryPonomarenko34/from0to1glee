@@ -9,13 +9,15 @@
 </head>
 
 <body>
-   {% include 'app/module/_header/_header.html' %}
+  <div class="site-container">
+   {% include 'app/module/_header/_header.njk' %}
   <main class="main">
     {% include 'app/module/_top/_top.html' %}
-    {% include 'app/module/_blog-details/_blog-details.html' %}
+    {% include 'app/module/_blog-details/_blog-details.njk' %}
     {% include 'app/module/_partner/_partner.html' %}
   </main>
    {% include 'app/module/_footer/_footer.html' %}
+  </div>
   <script src="js/main.min.js"></script>
 </body>
 

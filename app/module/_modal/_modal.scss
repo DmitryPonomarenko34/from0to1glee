@@ -1,6 +1,6 @@
 .modal {
-  font-size: 14px;
   padding: 115px 0 120px;
+  font-size: 14px;
 
   &__form {
     margin: 0 auto;
@@ -26,13 +26,13 @@
   }
 
   &__btn {
+    margin-bottom: 30px;
     border: none;
     padding: 18px 0;
-    margin-bottom: 30px;
     width: 100%;
-    color: #fff;
     font-weight: 500;
     font-size: 18px;
+    color: #fff;
     background-color: $second-bg;
     cursor: pointer;
   }
@@ -41,25 +41,23 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 15px;
-    padding-bottom: 15px;
     border-bottom: 2px solid #f6f6f6;
+    padding-bottom: 15px;
   }
-
-  &__error {}
 
   &__text {
     display: block;
-    text-align: center;
     margin-bottom: 20px;
+    text-align: center;
   }
 
   &__link {
-    text-align: center;
     display: block;
-    padding: 20px 0;
     border: 2px solid $second-bg;
+    padding: 20px 0;
     font-weight: 500;
     font-size: 18px;
+    text-align: center;
     color: $second-color;
   }
 }

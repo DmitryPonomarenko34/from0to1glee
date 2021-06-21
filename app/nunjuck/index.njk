@@ -9,7 +9,8 @@
 </head>
 
 <body>
-  {% include 'app/module/_header/_header.html' %}
+  <div class="site-container">
+  {% include 'app/module/_header/_header.njk' %}
   <main class="main">
   {% include 'app/module/_index/_top-slider/_top-slider.html' %}
   {% include 'app/module/_index/_info/_info.html' %}
@@ -20,6 +21,7 @@
   {% include 'app/module/_index/_articles/_articles.html' %}
   </main>
   {% include 'app/module/_footer/_footer.html' %}
+  </div>
   <script src="js/main.min.js"></script>
 </body>
 

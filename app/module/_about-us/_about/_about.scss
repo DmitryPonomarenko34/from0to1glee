@@ -1,26 +1,21 @@
-.about {
+.about{
   padding: 120px 0;
-
-  &__inner {
+  &__inner{
     display: flex;
     align-items: center;
   }
 }
-
-.about-img {
+.about-img{
   margin-right: 30px;
   max-width: 570px;
 }
-
-.about-content {
+.about-content{
   max-width: 570px;
-
   &__descr {
     position: relative;
     margin-bottom: 30px;
     padding-bottom: 60px;
-
-    &::after {
+    &::after{
       content: "";
       position: absolute;
       left: 0;
@@ -30,69 +25,58 @@
       background-color: $second-bg;
     }
   }
-
-  &__caption {
+  &__caption{
     display: flex;
     align-items: flex-end;
     margin-bottom: 35px;
   }
-
-  &__num {
+  &__num{
     margin-right: 30px;
     font-weight: 500;
     font-size: 140px;
     line-height: 0.8;
     color: $second-bg;
   }
-
-  &__word {
+  &__word{
     max-width: 55px;
     font-size: 16px;
     color: $second-color;
   }
-
-  &__title {
+  &__title{
     margin-bottom: 45px;
   }
-
-  &__title,
-  &__numbers {
-    font-size: 36px;
-    color: $second-color;
-
-    @extend %dmsans-bold;
-  }
-
-  &__text {
+  &__text{
     font-size: 16px;
     color: $second-color;
   }
-
-  &__info {
+  &__info{
     display: flex;
     align-items: center;
   }
-
-  &__item {
-    padding: 13px 0 10px 90px;
+  &__item{
+    padding: 13px 0 10px 85px;
     background-position: 28px 19px;
     background-size: 42px 40px;
     background-repeat: no-repeat;
 
-    &+.about-content__item {
+    &+.about-content__item{
       margin-left: 35px;
       border-left: 1px solid #e6eaf0;
     }
   }
-
-  &__numbers {
+  &__numbers{
     margin-bottom: 7px;
   }
-
-  &__subtext {
+  &__subtext{
     margin-left: 3px;
     font-size: 16px;
     color: #4c4c4c;
+    @extend %dmsans-bold;
+  }
+  &__title,
+  &__numbers{
+    font-size: 36px;
+    color: $second-color;
     @extend %dmsans-bold;
   }
 }

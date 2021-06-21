@@ -1,21 +1,23 @@
-.features {
+.features{
   padding: 95px 0 75px;
   background-color: #fcd7b6;
-
-  &__inner {
+  &__inner{
     display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
     justify-content: space-between;
   }
 
-  &__item {
+  &__item{
     display: flex;
     flex-direction: column;
     min-width: 135px;
+    max-width: 190px;
     text-align: center;
     color: $second-color;
   }
 
-  &__item-box {
+  &__item-box{
     display: flex;
     flex: 1 1 auto;
     align-items: center;
@@ -24,8 +26,8 @@
   }
 
   &__item-img {
-    margin-bottom: 5px;
     display: inline-block;
+    margin-bottom: 5px;
   }
 
   &__item-num {

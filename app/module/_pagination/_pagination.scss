@@ -1,6 +1,7 @@
 .pagination {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+  align-items: flex-start;
   justify-content: center;
   font-size: 16px;
   color: $second-color;
@@ -9,7 +10,9 @@
     display: flex;
     padding: 0 15px;
   }
-
+  &__list-item{
+    margin-bottom: 5px;
+  }
   &__list-item+.pagination__list-item {
     margin-left: 15px;
   }

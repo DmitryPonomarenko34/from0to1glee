@@ -102,10 +102,6 @@
   font-size: 12px;
   color: #222933;
 
-  &__time {
-    margin-right: 30px;
-  }
-
   &__time,
   &__author {
     position: relative;
@@ -125,6 +121,7 @@
   }
 
   &__time {
+    margin-right: 30px;
     &::before {
       background-image: url("../images/icons/clock.svg");
     }

@@ -17,8 +17,6 @@
     max-width: 550px;
   }
 
-  &__content {}
-
   &__title {
     margin-bottom: 25px;
     font-weight: 400;
@@ -56,35 +54,33 @@
     display: inline-block;
     border: none;
     border-radius: 8px;
+    padding: 15px 50px;
     font-size: 15px;
     text-transform: uppercase;
-    background-color: $second-bg;
-    padding: 15px 50px;
     color: #fff;
+    background-color: $second-bg;
     cursor: pointer;
   }
-
-  &__list {}
 
   &__item {
     color: $second-color;
   }
 
   .jq-number__field input {
+    border: none;
+    padding: 0;
     width: 100%;
     height: 100%;
-    padding: 0;
     text-align: center;
-    border: none;
   }
 
   .jq-number__field {
+    border: 1px solid $second-bg;
+    border-radius: 0;
     width: 148px;
     height: 43px;
-    border: 1px solid $second-bg;
-    text-align: center;
     box-shadow: none;
-    border-radius: 0;
+    text-align: center;
   }
 
   .jq-number {
@@ -93,12 +89,12 @@
 
     &__spin {
       position: absolute;
+      right: 0;
+      top: 0;
       width: 49px;
       height: 100%;
-      top: 0;
-      right: 0;
-      user-select: none;
       cursor: pointer;
+      user-select: none;
 
       &.minus {
         left: 0;
@@ -108,11 +104,11 @@
 
       &.minus::after,
       &.plus::after {
-        content: '';
-        top: 50%;
-        left: 20px;
-        border: none;
+        content: "";
         position: absolute;
+        left: 20px;
+        top: 50%;
+        border: none;
         width: 9px;
         height: 1px;
         background-color: $title-color;
@@ -122,10 +118,10 @@
         border-left: 1px solid $second-bg;
 
         &::before {
-          content: '';
+          content: "";
           position: absolute;
-          top: 18px;
           left: 50%;
+          top: 18px;
           width: 1px;
           height: 9px;
           background-color: $title-color;
@@ -139,22 +135,22 @@
   padding-top: 80px;
 
   &__control {
-    display: flex;
-    justify-content: center;
+    display: block;
     margin-bottom: 30px;
   }
 
   &__control-link {
-    margin-right: 15px;
     display: inline-block;
+    margin-right: 15px;
+    margin-bottom: 10px;
     border: none;
     border-radius: 8px;
-    font-size: 15px;
-    font-weight: 500;
-    text-transform: none;
-    background-color: #edf1f4;
     padding: 15px 50px;
+    font-weight: 500;
+    font-size: 15px;
+    text-transform: none;
     color: $second-color;
+    background-color: #edf1f4;
     cursor: pointer;
 
     &:last-child {
@@ -162,12 +158,10 @@
     }
 
     &--active {
-      background-color: $second-bg;
       color: #fff;
+      background-color: $second-bg;
     }
   }
-
-  &__content {}
 
   &__content-item {
     display: none;
@@ -183,8 +177,8 @@
   display: flex;
 
   .slick-vertical .slick-slide {
-    height: 160px;
     margin-bottom: 25px;
+    height: 160px;
   }
 
   &__nav {
@@ -198,11 +192,10 @@
     cursor: pointer;
 
     img {
-      max-height: 100%;
       margin: 0 auto;
+      max-height: 100%;
       object-fit: cover;
     }
-
   }
 
   &__for {
@@ -216,10 +209,10 @@
     height: 530px;
 
     img {
-      max-height: 407px;
-      max-width: 255px;
-      margin: 10% auto;
       vertical-align: middle;
+      margin: 10% auto;
+      max-width: 255px;
+      max-height: 407px;
       object-fit: cover;
     }
   }

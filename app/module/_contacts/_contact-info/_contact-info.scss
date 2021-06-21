@@ -1,36 +1,38 @@
 #map {
-  height: 335px;
   width: 100%;
+  height: 335px;
 }
 
 .contact-info {
   padding: 115px 0 70px;
 
   &__sub-title {
-    @extend %dmsans-medium;
-    font-size: 16px;
     margin-bottom: 20px;
+    font-size: 16px;
     text-align: center;
     color: $second-bg;
+    @extend %dmsans-medium;
   }
 
   &__title {
-    color: $second-color;
     margin-bottom: 70px;
+    color: $second-color;
   }
 
   &__inner {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    margin: 0 -1%;
   }
 
   &__item {
-    margin-right: 2.5%;
-    flex: 0 1 33.333%;
+    flex: 0 1 31.333%;
+    margin: 0 1%;
+    border: 2px solid transparent;
     padding: 70px 55px;
     text-align: center;
     background-color: #fbfbfb;
-    border: 2px solid transparent;
     transition: ease 0.3s border-color;
 
     &:last-child {
@@ -52,15 +54,14 @@
     }
   }
 
-
   &__icon {
-    width: 80px;
-    height: 80px;
-    background-color: #fff;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 40px;
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
     transition: ease 0.3s background-color;
 
     path {
@@ -76,13 +77,8 @@
   &__text,
   &__list-link,
   &__list-item {
-    color: #565872;
-    font-size: 16px;
     font-style: normal;
+    font-size: 16px;
+    color: #565872;
   }
-
-  &__list {}
-
-  &__list-item {}
-
 }

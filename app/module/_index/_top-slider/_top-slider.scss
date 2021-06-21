@@ -4,7 +4,7 @@
   &__inner {
     display: flex;
     align-items: center;
-    padding: 20px 0;
+    padding: 35px 0 75px;
     min-height: 822px;
     background-position: center right;
     background-size: 55% 73%;
@@ -23,7 +23,6 @@
     font-size: 72px;
     line-height: 70px;
     color: $second-color;
-
   }
 
   &__text {
@@ -33,12 +32,12 @@
 
   &__link {
     position: relative;
-    padding: 20px 100px 20px 28px;
-    transition: ease background-color 0.3s;
     display: inline-block;
+    padding: 20px 100px 20px 28px;
     font-size: 14px;
     color: #fff;
     background-color: $second-bg;
+    transition: ease background-color 0.3s;
 
     &::after {
       content: "";
