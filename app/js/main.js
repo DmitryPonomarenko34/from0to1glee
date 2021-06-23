@@ -56,6 +56,39 @@ $(function () {
     ]
   });
 
+  $('.partners-slide').slick({
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    dots: true,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 993,
+        settings: {
+          slidesToShow: 4,
+        }
+      },
+      {
+        breakpoint: 769,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+      {
+        breakpoint: 531,
+        settings: {
+          slidesToShow: 2,
+        }
+      },
+      {
+        breakpoint: 371,
+        settings: {
+          slidesToShow: 1,
+        }
+      },
+    ]
+  });
+
   $('.products-tabs__control-link').on('click', function (e) {
     e.preventDefault();
 

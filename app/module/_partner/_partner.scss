@@ -1,17 +1,58 @@
-ul.partners {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+.partners {
+  margin: 0 auto;
   padding: 40px 15px;
   background-color: #fcf5ee;
 
   &--long {
     margin-top: -201px;
-    padding: 275px 15px 80px;
+    padding: 275px 0 80px;
   }
-}
-
-.partners__item+.partners__item {
-  margin-left: 100px;
+  &__item{
+    height: 100px;
+    display: flex !important;
+    align-items: center;
+  }
+  &__img{
+    object-fit: cover;
+    margin: auto;
+  }
+  .slick-dots{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    li{
+      line-height: 0;
+      +li{
+        margin-left: 20px;
+      }
+    }
+    button{
+      position: relative;
+      font-size: 0;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 1px solid $default-color;
+      background-color: transparent;
+      cursor: pointer;
+      &::before{
+        content: '';
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        top: 7px;
+        left: 7px;
+        background-color: $default-color;
+      }
+    }
+  }
+  .slick-active{
+    button{
+      border-color: $title-color;
+      &::before{
+        background-color: $title-color;
+      }
+    }
+  }
 }
